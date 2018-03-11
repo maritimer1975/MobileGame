@@ -44,6 +44,8 @@ public class Movement : MonoBehaviour {
 		debugText += "\n   newPosition = " + newPosition;
 		debugText += "\n   movement = " + movement;
 
+//TODO: Maybe tie stopping movement into triggers on game boarders.
+
 		if( newPosition.x < xMin )
 			newPosition.x = xMin;
 		else if( newPosition.x > xMax )
