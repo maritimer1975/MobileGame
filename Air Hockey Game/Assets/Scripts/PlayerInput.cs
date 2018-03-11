@@ -3,9 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerInput : MonoBehaviour {
-
-	Vector3 pos;
-	[SerializeField] float speed = 0.5f;
+	
+	public Vector3 Movement
+	{
+		get;
+		set;
+	}
 
 	// Use this for initialization
 	void Start () {
@@ -13,12 +16,11 @@ public class PlayerInput : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
-		float x = Input.GetAxis("Horizontal") * speed;
-		float z = Input.GetAxis("Vertical") * speed;
-
-		pos = new Vector3(x, 0, z);
-
-		transform.Translate(pos.x, 0, pos.z);
+	void FixedUpdate () {
+		
+		float hAxis = Input.GetAxis("Horizontal");
+		float vAxis = Input.GetAxis("Vertical");
+		
+		Movement = new Vector3(hAxis, 0, vAxis);
 	}
 }
