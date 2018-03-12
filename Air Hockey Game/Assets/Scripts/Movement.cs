@@ -36,13 +36,6 @@ public class Movement : MonoBehaviour {
 		float zMin = -( ( boardDimension.length / 2) - (playerScale.z / 2 ) );
 		float zMax = -zMin;
 
-		string debugText = "Board Dimensions:";
-		debugText += "\n   xMin = " + xMin;
-		debugText += "\n   xMax = " + xMax;
-		debugText += "\n   zMin = " + zMin;
-		debugText += "\n   zMax = " + zMax;
-		debugText += "\n   newPosition = " + newPosition;
-		debugText += "\n   movement = " + movement;
 
 //TODO: Maybe tie stopping movement into triggers on game boarders.
 
@@ -57,7 +50,5 @@ public class Movement : MonoBehaviour {
 			newPosition.z = zMax;
 		
 		rigidbody.MovePosition(newPosition);
-				
-		Debug.Log(debugText);
 	}
 }
