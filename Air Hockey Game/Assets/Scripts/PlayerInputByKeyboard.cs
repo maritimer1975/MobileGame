@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerInput : MonoBehaviour {
+public class PlayerInputByKeyboard : MonoBehaviour {
 	
 	public Vector3 Movement
 	{
