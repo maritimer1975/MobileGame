@@ -12,13 +12,13 @@ public class PuckController : MonoBehaviour
 
 	[SerializeField] public GameBoardDimension boardDimension;
 
-	private Vector3 puckScale;
+	//private Vector3 puckScale;
 
 	void Start()
 	{
 		rigidbody = GetComponent<Rigidbody>();
 
-		puckScale = transform.localScale;
+		//puckScale = transform.localScale;
 
 	}
 

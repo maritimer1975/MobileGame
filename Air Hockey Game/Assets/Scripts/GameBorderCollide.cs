@@ -19,42 +19,39 @@ public class GameBorderCollide : MonoBehaviour
 		{
 			string debugText = "Game Border Collision with: " + col.collider.name;
 
-			Vector3 impulse = col.impulse / Time.deltaTime;
+			//Vector3 impulse = col.impulse / Time.deltaTime;
 
-			//Vector3 velocity = col.relativeVelocity;
+			Vector3 velocity = col.relativeVelocity;
 
-			debugText += "\n    Initial Impulse: " + impulse;
+			debugText += "\n    Initial Relative Velocity: " + velocity;
 			debugText += "\n    Bounce Factor: " + bounceFactor;
 			debugText += "\n    Max Bounce: " + maxBounce;
-
-			//debugText+= "\n    Initial Relative Velocity: " + impulse;
+			debugText += "\n    Contact with side: " + borderSide;
+			
 			//FIXME: When bouncing on left / right the z direction is not working properly. 
 			switch (borderSide)
 			{
 				case "left":
 				case "right":
-					impulse.x = impulse.x * bounceFactor;
-					impulse.z *= bounceFactor;
-					debugText += "\n    Contact with side: " + borderSide;
+					velocity.x = -velocity.x * bounceFactor;
+					velocity.z *= bounceFactor;
 					break;
 
 				case "top":
 				case "bottom":
-					impulse.z = impulse.z * bounceFactor;
-					impulse.x *= bounceFactor;
-					debugText += "\n    Contact with side: " + borderSide;
+					velocity.z = -velocity.z * bounceFactor;
+					velocity.x *= bounceFactor;
 					break;
 
 				default:
 					break;
 			}
 
-			
-			impulse = Vector3.ClampMagnitude(impulse, maxBounce);
+			velocity = Vector3.ClampMagnitude(velocity, maxBounce);
 
-			col.gameObject.GetComponent<Rigidbody>().AddForce(impulse, ForceMode.Impulse);
+			col.gameObject.GetComponent<Rigidbody>().AddForce(velocity, ForceMode.Impulse);
 			
-			debugText += "\n    Bounced Relative impulse: " + impulse;
+			debugText += "\n    Bounced Relative impulse: " + velocity;
 
 			Debug.Log(debugText);
 

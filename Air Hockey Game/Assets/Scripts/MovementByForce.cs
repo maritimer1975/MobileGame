@@ -34,7 +34,7 @@ public class MovementByForce : MonoBehaviour {
 
 		movement = Vector3.ClampMagnitude(movement, maxForce);
 
-		rigidbody.AddForce(movement,ForceMode.Force);
+		rigidbody.AddForce(movement,ForceMode.Acceleration);
 
 		debugText+= "\n    PlayerInput.Movement: " + movement.ToString();
 

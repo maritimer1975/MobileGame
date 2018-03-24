@@ -158,8 +158,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be41a07952195244a8e8792e1c22ff49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceFactor: 20
-  maxBounce: 10
+  bounceFactor: 10
+  maxBounce: 12
   borderSide: left
 --- !u!23 &127867180
 MeshRenderer:
@@ -292,7 +292,7 @@ BoxCollider:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 226504973}
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 13400000, guid: 8d6d981f6e72dd241896ab56fd8a8386, type: 2}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
@@ -363,7 +363,7 @@ Prefab:
     - target: {fileID: 54863958697922730, guid: 42f0853b40118f848a5ac50522242a39,
         type: 2}
       propertyPath: m_UseGravity
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 54863958697922730, guid: 42f0853b40118f848a5ac50522242a39,
         type: 2}
@@ -385,6 +385,16 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 69dc9db1459973541af19c64b13d5827, type: 2}
+    - target: {fileID: 54863958697922730, guid: 42f0853b40118f848a5ac50522242a39,
+        type: 2}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 54863958697922730, guid: 42f0853b40118f848a5ac50522242a39,
+        type: 2}
+      propertyPath: m_Drag
+      value: 0.8
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114261750123280014, guid: 42f0853b40118f848a5ac50522242a39, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 42f0853b40118f848a5ac50522242a39, type: 2}
@@ -515,8 +525,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be41a07952195244a8e8792e1c22ff49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceFactor: 30
-  maxBounce: 10
+  bounceFactor: 10
+  maxBounce: 12
   borderSide: bottom
 --- !u!23 &623946630
 MeshRenderer:
@@ -632,6 +642,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 39f68e68538fd524e96ef3be6626808b, type: 2}
+    - target: {fileID: 54120648308258498, guid: 1fa1da8d6b2a6ad43ad3a8cb76c322c4,
+        type: 2}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 114326091302062046, guid: 1fa1da8d6b2a6ad43ad3a8cb76c322c4, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 1fa1da8d6b2a6ad43ad3a8cb76c322c4, type: 2}
@@ -652,7 +667,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6791dbc9636cb3948bbf69715fb5f9b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxForce: 10
+  maxForce: 20
   boardDimension: {fileID: 11400000, guid: 5f2cabb0b4a50784e970e6f8dd0a83f2, type: 2}
 --- !u!1 &1760577399
 GameObject:
@@ -756,7 +771,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bounceFactor: 10
-  maxBounce: 10
+  maxBounce: 12
   borderSide: top
 --- !u!1 &1777091204
 GameObject:
@@ -910,8 +925,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: be41a07952195244a8e8792e1c22ff49, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bounceFactor: 40
-  maxBounce: 10
+  bounceFactor: 10
+  maxBounce: 12
   borderSide: right
 --- !u!1 &1876165176 stripped
 GameObject:
